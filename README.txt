@@ -1,39 +1,41 @@
-# Markov-chain-tweets
+A C++ project that implements a simple feedforward neural network (MLP) to classify 28×28 grayscale digit images.
 
-A C-based application that generates tweets using Markov Chain algorithms.
+Features-
+Custom matrix operations (no external libraries)
 
-## Overview
+2-layer MLP with ReLU and Softmax
 
-This project demonstrates the application of Markov Chains for text generation, specifically tailored to simulate tweet-like messages. Developed in C, it showcases proficiency in data structures, algorithms, and file handling.
+Hardcoded weights for classification
 
-## Features
+CLI for predicting raw input images
 
-- **Markov Chain Implementation**: Generates text sequences based on probabilistic models.
-- **Linked List Data Structure**: Efficient management of state transitions using custom linked lists.
-- **File Handling**: Processes input text files to build the Markov model.
+Python scripts to visualize images
 
-## Project Structure
+How to Use-
+Build with make
 
-- **linked_list.c / linked_list.h**: Implementation of a generic linked list data structure.
-- **markov_chain.c / markov_chain.h**: Core logic for the Markov Chain text generation.
-- **tweets_generator.c**: Main program that ties everything together and generates tweets.
-- **justdoit_tweets.txt**: Sample input file containing seed text for the Markov Chain.
-- **makefile**: Build instructions for the project.
+Run with:
 
-## Skills Demonstrated
+bash
+Copy
+Edit
+./main images/im5
+Visualize images using:
 
-- **C Programming**: Advanced use of C for algorithm implementation and system-level programming.
-- **Data Structures**: Creation and manipulation of custom linked lists.
-- **Algorithm Development**: Design and implementation of Markov Chain-based text generation.
-- **File I/O**: Reading from and writing to files for data processing.
+bash
+Copy
+Edit
+python3 plot_img.py images/im5
+Key Files-
+main.cpp: Runs inference
 
-## Future Enhancements
+MlpNetwork.*, Dense.*, Matrix.*: Core NN and math logic
 
-- **Dynamic Input Handling**: Allow users to specify different input text files at runtime.
-- **Parameter Tuning**: Introduce configurable parameters for the Markov Chain, such as the order of the chain.
-- **User Interface**: Develop a simple GUI or command-line options for better user interaction.
+images/: Sample input files
 
-## Contact
+plot_img.py: Show input images
 
-For any questions or suggestions, feel free to reach out via the repository's issue tracker.
+Learning Goals-
+Understand how neural networks work internally
 
+Implement matrix math and forward propagation from scratch
